@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  
+	xmlns:ns1="http://org.apache.axis2/xsd" 
+	xmlns:ns="http://webservice.sat.mediosdepago.tecnocom.com" 
+	xmlns:ax2265="http://commons.soapwebservices.ease/xsd" 
+	xmlns:ax2261="http://webservice.sat.mediosdepago.tecnocom.com/xsd" 
+	xmlns:ax2262="http://satNewAge.soapwebservices.ease/xsd" 
+	xmlns:ax2263="http://satNewAge.soapwebservices.ease/xsd" 
+	xmlns:ax2266="http://commons.soapwebservices.ease/xsd" 
+	xmlns:ax2264="http://webservice.sat.mediosdepago.tecnocom.com/xsd">
+	<soap:Body>
+		<ns:runServiceResponse xmlns:ns="http://webservice.sat.mediosdepago.tecnocom.com" 
+			xmlns="http://webservice.sat.mediosdepago.tecnocom.com">
+			<ns:return xmlns:ax2241="http://webservice.sat.mediosdepago.tecnocom.com/xsd" 
+				xmlns:ax2242="http://satNewAge.soapwebservices.ease/xsd" 
+				xmlns:ax2245="http://commons.soapwebservices.ease/xsd" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xsi:type="ax2241:Respuesta_FLCLCLCWS">
+				<ax2242:claveFin>000000000000 0142 01988514 604 0609 000000003068 T TARJETA TI TITULAR 0001-01-01 2015-11-06-16.17.15.058635    </ax2242:claveFin>
+				<ax2242:claveInicio>000000000000 0142 01988514 604 0609 000000003068 T TARJETA TI TITULAR 0001-01-01 2015-11-06-16.17.15.058635    </ax2242:claveInicio>
+				<ax2242:descRetorno>Operación Realizada con éxito</ax2242:descRetorno>
+				<ax2242:indMasDatos>N</ax2242:indMasDatos>
+				<ax2242:pantPagina>001</ax2242:pantPagina>
+				<ax2242:retorno>000</ax2242:retorno>
+				<ax2242:tiempoEjecucion>18ms</ax2242:tiempoEjecucion>
+				<ax2242:totalRegistros>1</ax2242:totalRegistros>
+				<ax2241:registros_FLCLCLC xsi:type="ax2241:Registro_FLCLCLCWS">
+					<ax2245:registro_Numero>1</ax2245:registro_Numero>
+					<ax2241:calpart>TI</ax2241:calpart>
+					<ax2241:centalta>0609</ax2241:centalta>
+					<ax2241:clamon />
+					<ax2241:codent />
+					<ax2241:contcur>2015-11-06-16.17.15.058635</ax2241:contcur>
+					<ax2241:cuenta>000000003068</ax2241:cuenta>
+					<ax2241:descalpart>TITULAR</ax2241:descalpart>
+					<ax2241:desmot />
+					<ax2241:destipcont>TARJETA</ax2241:destipcont>
+					<x2241:fechabaja xsi:type="ax2245:EaseDate">
+						<ax2245:anno>0</ax2245:anno>
+						<ax2245:dia>0</ax2245:dia>
+						<ax2245:format>dd-MM-yyyy</ax2245:format>
+						<ax2245:mes>0</ax2245:mes>
+						<ax2245:nombreDia />
+						<ax2245:nombreMes />
+						<ax2245:valueDate />
+					</x2241:fechabaja>
+					<xsd1:motbaja>2</xsd1:motbaja>
+					<xsd1:tipcont>T</xsd1:tipcont>
+				</ax2241:registros_FLCLCLC>
+			</ns:return>
+		</ns:runServiceResponse>
+	</soap:Body>
+</soap:Envelope>
