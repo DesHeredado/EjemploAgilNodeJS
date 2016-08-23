@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="084cdb44-7f36-47fe-b8db-284164fd4269" activeEnvironment="Default" name="A" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b9f45251-445b-4d13-a070-6d1145e27e23" wsaVersion="NONE" name="SAT_FLCLCLCWSSoap11Binding" type="wsdl" bindingName="{http://webservice.sat.mediosdepago.tecnocom.com}SAT_FLCLCLCWSSoap11Binding" soapVersion="1_1" anonymous="optional" definition="file:/root/Escritorio/SandBox/SAT_FLCLCLCWS/SAT_FLCLCLCWS.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/root/Escritorio/SandBox/SAT_FLCLCLCWS/SAT_FLCLCLCWS.wsdl"><con:part><con:url>file:/root/Escritorio/SandBox/SAT_FLCLCLCWS/SAT_FLCLCLCWS.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://webservice.sat.mediosdepago.tecnocom.com" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://webservice.sat.mediosdepago.tecnocom.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax2265="http://commons.soapwebservices.ease/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ax2261="http://webservice.sat.mediosdepago.tecnocom.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ax2262="http://satNewAge.soapwebservices.ease/xsd">
+  <wsdl:documentation>CONSULTA RELACION PERSONA-CONTRATO</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://commons.soapwebservices.ease/xsd">
+      <xs:complexType name="RegistroNewAge">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="registro_Numero" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EaseDate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="anno" type="xs:int"/>
+          <xs:element minOccurs="0" name="dia" type="xs:int"/>
+          <xs:element minOccurs="0" name="format" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="mes" type="xs:int"/>
+          <xs:element minOccurs="0" name="nombreDia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="nombreMes" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="valueDate" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.sat.mediosdepago.tecnocom.com/xsd" xmlns:ax2263="http://satNewAge.soapwebservices.ease/xsd" xmlns:ax2266="http://commons.soapwebservices.ease/xsd">
+      <xs:import namespace="http://satNewAge.soapwebservices.ease/xsd"/>
+      <xs:import namespace="http://commons.soapwebservices.ease/xsd"/>
+      <xs:complexType name="Peticion_FLCLCLCWS">
+        <xs:complexContent>
+          <xs:extension base="ax2262:PeticionNewAge">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="centalta" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="identcli" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Respuesta_FLCLCLCWS">
+        <xs:complexContent>
+          <xs:extension base="ax2262:RespuestaNewAge">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="registros_FLCLCLC" nillable="true" type="ax2261:Registro_FLCLCLCWS"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Registro_FLCLCLCWS">
+        <xs:complexContent>
+          <xs:extension base="ax2266:RegistroNewAge">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="calpart" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="centalta" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="clamon" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="codent" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="contcur" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="descalpart" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="desmot" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="destipcont" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="fechabaja" nillable="true" type="ax2266:EaseDate"/>
+              <xs:element minOccurs="0" name="identcli" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="motbaja" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="tipcont" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.sat.mediosdepago.tecnocom.com" xmlns:ax2264="http://webservice.sat.mediosdepago.tecnocom.com/xsd">
+      <xs:import namespace="http://webservice.sat.mediosdepago.tecnocom.com/xsd"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Exception" nillable="true" type="ns:Exception"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="runService">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="msgEnvio" nillable="true" type="ax2261:Peticion_FLCLCLCWS"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="runServiceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax2261:Respuesta_FLCLCLCWS"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="testNametransaccionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://satNewAge.soapwebservices.ease/xsd">
+      <xs:complexType name="PeticionNewAge">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="autoPaginable" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="avanzar" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="claveFin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="claveInicio" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="entidad" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="idioma" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="indMasDatos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="oficina" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="pantPagina" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="retroceder" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="tipoOperacion" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RespuestaNewAge">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="claveFin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="claveInicio" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="descRetorno" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="indMasDatos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="pantPagina" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="retorno" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="tiempoEjecucion" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="totalRegistros" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="runServiceResponse">
+    <wsdl:part name="parameters" element="ns:runServiceResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="testNametransaccionRequest"></wsdl:message>
+  <wsdl:message name="runServiceRequest">
+    <wsdl:part name="parameters" element="ns:runService"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="parameters" element="ns:Exception"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="testNametransaccionResponse">
+    <wsdl:part name="parameters" element="ns:testNametransaccionResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SAT_FLCLCLCWSPortType">
+    <wsdl:operation name="runService">
+      <wsdl:input message="ns:runServiceRequest" wsaw:Action="urn:runService"></wsdl:input>
+      <wsdl:output message="ns:runServiceResponse" wsaw:Action="urn:runServiceResponse"></wsdl:output>
+      <wsdl:fault name="Exception" message="ns:Exception" wsaw:Action="urn:runServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="testNametransaccion">
+      <wsdl:input message="ns:testNametransaccionRequest" wsaw:Action="urn:testNametransaccion"></wsdl:input>
+      <wsdl:output message="ns:testNametransaccionResponse" wsaw:Action="urn:testNametransaccionResponse"></wsdl:output>
+      <wsdl:fault name="Exception" message="ns:Exception" wsaw:Action="urn:testNametransaccionException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SAT_FLCLCLCWSSoap11Binding" type="ns:SAT_FLCLCLCWSPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="runService">
+      <soap:operation soapAction="urn:runService" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="testNametransaccion">
+      <soap:operation soapAction="urn:testNametransaccion" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SAT_FLCLCLCWS">
+    <wsdl:port name="SAT_FLCLCLCWSHttpSoap11Endpoint" binding="ns:SAT_FLCLCLCWSSoap11Binding">
+      <soap:address location="http://localhost:8088/mockSAT_FLCLCLCWSSoap11Binding"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8000/mockSAT_FLCLCLCWSSoap11Binding</con:endpoint></con:endpoints><con:operation id="6c01c7e8-c4af-4f24-acab-75debecb160a" isOneWay="false" action="urn:runService" name="runService" bindingOperationName="runService" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3049b8c-b450-4822-a86a-319f779d2d13" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8000/wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.sat.mediosdepago.tecnocom.com" xmlns:xsd="http://satNewAge.soapwebservices.ease/xsd" xmlns:xsd1="http://webservice.sat.mediosdepago.tecnocom.com/xsd">
+   <soapenv:Header>
+   	<web:xx>sss</web:xx>
+   </soapenv:Header>
+   <soapenv:Body>
+      <web:runService>
+         <!--Optional:-->
+         <web:msgEnvio>
+            <!--Optional:-->
+            <xsd:autoPaginable>true</xsd:autoPaginable>
+            <!--Optional:-->
+            <xsd:avanzar>true</xsd:avanzar>
+            <!--Optional:-->
+            <xsd:claveFin>?</xsd:claveFin>
+            <!--Optional:-->
+            <xsd:claveInicio>?</xsd:claveInicio>
+            <!--Optional:-->
+            <xsd:entidad>?</xsd:entidad>
+            <!--Optional:-->
+            <xsd:idioma>?</xsd:idioma>
+            <!--Optional:-->
+            <xsd:indMasDatos>?</xsd:indMasDatos>
+            <!--Optional:-->
+            <xsd:oficina>?</xsd:oficina>
+            <!--Optional:-->
+            <xsd:pantPagina>?</xsd:pantPagina>
+            <!--Optional:-->
+            <xsd:password>?</xsd:password>
+            <!--Optional:-->
+            <xsd:retroceder>false</xsd:retroceder>
+            <!--Optional:-->
+            <xsd:tipoOperacion>ARF</xsd:tipoOperacion>
+            <!--Optional:-->
+            <xsd:usuario>?</xsd:usuario>
+            <!--Optional:-->
+            <xsd1:centalta>12</xsd1:centalta>
+            <!--Optional:-->
+            <xsd1:cuenta>234</xsd1:cuenta>
+            <!--Optional:-->
+            <xsd1:identcli>345</xsd1:identcli>
+         </web:msgEnvio>
+      </web:runService>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:runService"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c149f075-dc62-40a1-8173-630cd5556f0e" isOneWay="false" action="urn:testNametransaccion" name="testNametransaccion" bindingOperationName="testNametransaccion" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b540f67b-90dc-4339-a40c-f5a1fcadce51" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8000/wsdl</con:endpoint><con:request>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   &lt;soapenv:Header/>
+   &lt;soapenv:Body/>
+&lt;/soapenv:Envelope></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:testNametransaccion"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
